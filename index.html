@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Travel</title>
+    <link rel="shortcut icon" href="imgs/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="flexslider/flexslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/fs-slider.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/11390cb447.js" crossorigin="anonymous"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/navgation.js"></script>
+    <script src="flexslider/jquery.flexslider.js"></script>
+    <script>
+        $(function() {
+            $('.flexslider').flexslider({
+                animation: "slide" //fade
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html"><img src="imgs/dt-logo.png" alt="space travel"></a></h1>
+            <a href="#" id="trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <ul id="main-menu">
+                <li>
+                    <a href="#">소개</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">회사연혁</a></li>
+                        <li><a href="#">회사위치</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">우주여행안내</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">금성 우주여행</a></li>
+                        <li><a href="#">화성 우주여행</a></li>
+                        <li><a href="#">토성 우주여행</a></li>
+                        <li><a href="#">목성 우주여행</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">별자리</a></li>
+                <li><a href="#">별마루천문대</a></li>
+            </ul>
+
+            <ul class="topmenu dt">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul>
+            <ul class="topmenu mb">
+                <li><a href="#"><i class="bi bi-person-fill"></i></a></li>
+                <li><a href="#"><i class="bi bi-link-45deg"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="flexslider">
+        <ul class="slides">
+            <li class="fs-slide">
+                <div class="fs-item-bg fs-bg-1"></div>
+                <div class="fs-slideContents">
+                    <h2>START SPACE TRAVEL</h2>
+                    <p>밀키북과 함께 우주의 신비한 곳으로 여행해요.<br>
+                        우주의 새로운 매력에 매료 될겁니다.</p>
+                </div>
+            </li>
+            <li class="fs-slide">
+                <div class="fs-item-bg fs-bg-2"></div>
+                <div class="fs-slideContents">
+                    <h2>Byeolmaro Observatory</h2>
+                    <p>영월, 별마로천문대는. 봉래산 해발 799.8m에 자리하고 있다.<br> 관측실 천정이 자동으로 열리자 캄캄한 밤하늘에 아름다운 별들의 모습이 보인다.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <section id="mc">
+        <article>
+            <h3>Space travel</h3>
+            <div class="at-bg at-bg-1"></div>
+            <p>경이로운 우주 여행...  앞으로 먼 미래에 우
+                주를 탐험 할 수 있는 날이 옵니다! 사전예약
+                하러 가볼까요?</p>
+        </article>
+        <article>
+            <h3>Galaxy</h3>
+            <div class="at-bg at-bg-2"></div>
+            <p>20세기 초까지만 해도 사람들은 우리 은하계
+                가 우주의 전부라고 생각했다.당시의 망원경
+                은 지금 보다...</p>
+        </article>
+        <article>
+            <h3>Earth</h3>
+            <div class="at-bg at-bg-3"></div>
+            <p>지구는 우주에서 봤을 때 푸른색의 바다와 녹
+                색의 산, 갈색의 흙에 흰색의 구름이 조화를
+                이루고 있는...</p>
+        </article>
+        <article>
+            <h3>Astronomy</h3>
+            <div class="at-bg at-bg-4"></div>
+            <p>최상의 관측조건인 해발 799.8m 봉래산 정
+                상에 자리하고 있으며, 지름 80cm 주망원경
+                과 여러대의...</p>
+        </article>
+    </section>
+    <div class="clear"></div>
+
+    <footer>
+        <div class="ft-wrap">
+            <div class="ft-logo"><img src="imgs/ft-logo.png" alt="밀키북 로고"></div>
+            <div class="ft-txt">
+                <p>광주광역시 동구 무등로 339 (구: 계림동 558-7번지) | TEL : 062)605-8000,8008(홍보실) 8031(행정실) | FAX : 062)605-8015(홍보실)</p>
+                <p>Copyright &copy; 2022 Milky Book. All Rights Reserved.</p>
+            </div>
+            <ul class="ft-sns">
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

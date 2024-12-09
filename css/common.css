@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+header {position:fixed; left:0; top:0; width:100%; height:50px; z-index:9;}
+#main-menu > li {position:relative;}
+
+@media screen and (min-width:1350px) {
+    /*===== header =====*/
+    #trigger, .mb {display:none;}
+
+    header {background:rgba(0,0,0,0.75);}
+    nav {width:1300px; height:50px; margin:0 auto; padding:0 30px}
+    h1 {float:left;}
+    nav #main-menu {float:left; margin-left:50px;}
+    nav #main-menu > li > a {
+        padding:20px 30px 10px;
+        background:url('../imgs/dt-mm-bg.jpg') no-repeat right 23px;
+    }
+    nav #main-menu > li:last-child > a {background:none;}
+    nav .topmenu {float:right;}
+    nav .topmenu a {
+        padding:17px 30px; font-size:13px;
+        background:url('../imgs/dt-mm-bg.jpg') no-repeat right center;
+    }
+    nav .topmenu li:last-child a {padding-right:0; background:none;}
+    nav a {color:#F4F4F4;}
+    nav a:hover {color:#0191FF;}
+
+    nav .sub-menu {display:none; position:absolute;}
+    nav .sub-menu li {float:none;}
+    .sub-menu li a {
+        height:40px; text-align:center; line-height:38px;
+        background:rgba(0,0,0,0.8);
+    }
+    .sub-menu li a:hover {background:rgba(250,30,100,0.75);}
+    #main-menu > li:first-child .sub-menu li a {width:90px;}
+    #main-menu > li:nth-child(2) .sub-menu li a {width:150px;}
+    .sub-menu li:last-child a {border-radius:0 0 5px 5px;}
+
+
+    /*===== footer =====*/
+    footer {height:150px; margin-top:50px; background:#02214f;}
+    .ft-wrap {width:1300px; height:150px; margin:0 auto; padding:0 30px;}
+    .ft-logo {float:left; margin-top:25px;}
+    .ft-txt, .ft-sns a {color:#F4F4F4;}
+    .ft-txt {float:left; margin:35px 0 0 110px; font-size:12px;}
+    .ft-sns {float:right; margin-top:33px;}
+    .ft-sns a {font-size:26px; padding-left:15px;}
+}
+
+@media screen and (min-width:1050px) and (max-width:1349px) {
+    /*===== header =====*/
+    #trigger, .mb {display:none;}
+
+    header {background:rgba(0,0,0,0.75);}
+    nav {width:1000px; height:50px; margin:0 auto; padding:0 20px}
+    h1 {float:left;}
+    nav #main-menu {float:left; margin-left:50px;}
+    #main-menu > li {position:relative;}
+    nav #main-menu > li > a {
+        padding:20px 20px 10px;
+        background:url('../imgs/dt-mm-bg.jpg') no-repeat right 23px;
+    }
+    nav #main-menu > li:last-child > a {background:none;}
+    nav .topmenu {float:right;}
+    nav .topmenu a {
+        padding:17px 15px; font-size:13px;
+        background:url('../imgs/dt-mm-bg.jpg') no-repeat right center;
+    }
+    nav .topmenu li:last-child a {padding-right:0; background:none;}
+    nav a {color:#F4F4F4;}
+    nav a:hover {color:#0191FF;}
+    
+    nav .sub-menu {display:none; position:absolute;}
+    nav .sub-menu li {float:none;}
+    .sub-menu li a {
+        height:40px; text-align:center; line-height:38px;
+        background:rgba(0,0,0,0.8);
+    }
+    .sub-menu li a:hover {background:rgba(250,30,100,0.75);}
+    #main-menu > li:first-child .sub-menu li a {width:90px;}
+    #main-menu > li:nth-child(2) .sub-menu li a {width:150px;}
+    .sub-menu li:last-child a {border-radius:0 0 5px 5px;}
+
+
+    /*===== footer =====*/
+    footer {height:150px; margin-top:50px; background:#02214f;}
+    .ft-wrap {width:1000px; height:150px; margin:0 auto; padding:0 20px;}
+    .ft-logo {float:left; margin-top:25px;}
+    .ft-txt, .ft-sns a {color:#F4F4F4;}
+    .ft-txt {float:left; width:500px; margin:35px 0 0 70px; font-size:12px;}
+    .ft-sns {float:right; margin-top:33px;}
+    .ft-sns a {font-size:26px; padding-left:15px;}
+}
+
+@media screen and (min-width:600px) and (max-width:1049px) {
+    .dt {display:none;}
+
+    header {
+        background:rgb(255,255,255);
+        border-bottom:1px solid #D8D8D8;
+    }
+    nav {width:100%; height:50px;}
+    h1 {width:160px; margin:0 auto;}
+    #trigger {
+        position:absolute; right:20px; top:16px;
+        width:36px; height:20px;
+    }
+    #trigger > span {
+        position:absolute; left:50%; height:2px; 
+        background:#02214F; border-radius:1px;
+        transition:all 0.4s ease;
+    }
+    #trigger > span:nth-child(1) {top:0; width:30px; margin-left:-15px;}
+    #trigger > span:nth-child(2) {
+        top:9px; width:100%; margin-left:-18px;
+        background:rgb(255, 0, 76);
+    }
+    #trigger > span:nth-child(3) {bottom:0; width:30px; margin-left:-15px;}
+    #trigger:hover > span:nth-child(1) {width:100%; margin-left:-18px;}
+    #trigger:hover > span:nth-child(2) {
+        width:30px; margin-left:-15px;
+        background:rgb(255, 0, 75);
+    }
+    #trigger:hover > span:nth-child(3) {width:100%; margin-left:-18px;}
+
+    #main-menu {
+        position:absolute; left:-1100px; top:50px; width:100%; height:100vh;
+        background:rgba(0, 70, 120, 0.9); opacity:0;
+        transition:all 0.4s ease-in;
+    }
+    #main-menu a {color:#F4F4F4;}
+    #main-menu > li, .sub-menu > li {float:none; text-align:center;}
+    #main-menu > li > a {padding:40px 0; font-size:24px;}
+    .sub-menu {display:none;}
+    .sub-menu > li > a {font-size:20px; line-height:40px; background:rgba(255, 0, 75,0.9);}
+    .sub-menu > li:first-child > a {padding-top:20px;}
+    .sub-menu > li:last-child > a {padding-bottom:20px;}
+
+    nav .topmenu {position:absolute; left:20px; top:3px;}
+    nav .topmenu a {padding-right:5px; font-size:32px;}
+    
+    /*===== #trigger 클릭했을 때 =====*/
+    #trigger.active > span:nth-child(1) {width:70%; transform:translateY(9px) rotate(-130deg);}
+    #trigger.active > span:nth-child(2) {opacity:0;}
+    #trigger.active > span:nth-child(3) {width:70%; transform:translateY(-9px) rotate(130deg);}
+    #main-menu.active {left:0; opacity:1;}
+
+
+    /*===== footer =====*/
+    footer {position:relative; height:250px; margin-top:50px; background:#02214f;}
+    .ft-wrap {height:250px; padding:0 20px;}
+    .ft-logo {width:160px; margin:0 auto; padding-top:25px;}
+    .ft-txt, .ft-sns a {color:#F4F4F4;}
+    .ft-txt {width:500px; margin:0 auto; padding-top:10px; font-size:12px; text-align:center;}
+    .ft-sns {position:absolute; left:50%; top:155px; transform:translateX(-50%);}
+    .ft-sns a {font-size:28px; padding:0 15px;}
+}
+@media screen and (max-width:599px) {
+    .dt {display:none;}
+
+    header {
+        background:rgb(255,255,255);
+        background:#852a15e1;
+        border-bottom:1px solid #D8D8D8;
+    }
+    h1 {width:160px; margin:0 auto;}
+    #trigger {
+        position:absolute; left:10px; top:16px;
+        width:36px; height:20px;
+    }
+    #trigger > span {
+        display:block; position:absolute; left:50%; height:2px; 
+        background:#02214F; border-radius:1px;
+        transition:all 0.4s ease;
+    }
+    #trigger > span:nth-child(1) {top:0; width:30px; margin-left:-15px;}
+    #trigger > span:nth-child(2) {
+        top:9px; width:100%; margin-left:-18px;
+        background:rgb(255, 0, 76);
+    }
+    #trigger > span:nth-child(3) {bottom:0; width:30px; margin-left:-15px;}
+    #trigger:hover > span:nth-child(1) {width:100%; margin-left:-18px;}
+    #trigger:hover > span:nth-child(2) {
+        width:30px; margin-left:-15px;
+        background:rgb(255, 0, 75);
+    }
+    #trigger:hover > span:nth-child(3) {width:100%; margin-left:-18px;}
+
+    #main-menu {
+        position:absolute; left:-1100px; top:50px; width:100%; height:100vh;
+        background:rgba(0, 70, 120, 0.9); opacity:0;
+        transition:all 0.4s ease-in;
+    }
+    #main-menu a {color:#F4F4F4;}
+    #main-menu > li, .sub-menu > li {float:none; text-align:center;}
+    #main-menu > li > a {padding:40px 0; font-size:24px;}
+    .sub-menu {display:none;}
+    .sub-menu > li > a {font-size:20px; line-height:40px; background:rgba(255, 0, 75,0.9);}
+    .sub-menu > li:first-child > a {padding-top:20px;}
+    .sub-menu > li:last-child > a {padding-bottom:20px;}
+
+    nav .topmenu {position:absolute; right:10px; top:3px;}
+    nav .topmenu a {padding-right:5px; font-size:32px;}
+    
+    /*===== #trigger 클릭했을 때 =====*/
+    #trigger.active > span:nth-child(1) {width:80%; transform:translateY(9px) rotate(-130deg);}
+    #trigger.active > span:nth-child(2) {opacity:0;}
+    #trigger.active > span:nth-child(3) {width:80%; transform:translateY(-9px) rotate(130deg);}
+    #main-menu.active {left:0; opacity:1;}
+
+
+    /*===== footer =====*/
+    footer {position:relative; height:250px; margin-top:50px; background:#02214f;}
+    .ft-wrap {height:250px; padding:0 10px;}
+    .ft-logo {width:160px; margin:0 auto; padding-top:25px;}
+    .ft-txt, .ft-sns a {color:#F4F4F4;}
+    .ft-txt {width:280px; margin:0 auto; padding-top:10px; font-size:12px; text-align:center;}
+    .ft-sns {position:absolute; left:50%; top:170px; transform:translateX(-50%);}
+    .ft-sns a {font-size:28px; padding:0 15px;}
+}
