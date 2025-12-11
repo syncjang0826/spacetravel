@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+header {
+    position:fixed; left:0; top:0;
+    width:100%; height:50px; z-index:9;
+}
+
+
+/* 웹브라우저의 너비값이 1350픽셀 이상인 경우에만 스타일 적용 */
+@media screen and (min-width:1350px) {
+    #trigger, .mb { display:none; }
+
+    header.dark { background:rgba(0,0,0,0.8); }
+    nav {
+        position:relative;
+        display:flex; justify-content:space-between; align-items:center;
+        width:1300px; height:100%; margin:0 auto; padding:0 30px;
+    }
+    nav a { color:#fff; }
+    #main-menu, .top-menu { display:flex; }
+    #main-menu { position:absolute; left:300px; top:0; }
+    #main-menu > li > a {
+        padding:15px 20px 13px;
+        background:url('../imgs/menu-bar.jpg') no-repeat right 20px;
+    }
+    #main-menu > li > a:hover { color:rgb(250, 30, 100); }
+    #main-menu > li:last-child > a { background:none; }
+    .top-menu a { padding-left:20px; font-size:14px; }
+
+    /* ===== dropdown menu =====*/
+    #main-menu > li { position:relative; }
+    .sub-menu { display:none; position:absolute; top:50px; }
+    .sub-menu a {
+        height:40px; font-size:14px; text-align:center; line-height:38px;
+        background:rgba(0,0,0,0.85);
+        transition:all 0.2s ease-in;
+    }
+    #main-menu > li:first-child .sub-menu a { width:90px; }
+    #main-menu > li:nth-child(2) .sub-menu a { width:130px; }
+    #main-menu > li:first-child .sub-menu { left:-8px; }
+    #main-menu > li:nth-child(2) .sub-menu { left:-4px; }
+    .sub-menu a:hover { background:rgba(250, 30, 100, 0.8); }
+    .sub-menu li:last-child a { border-radius:0 0 10px 10px; }
+
+
+    /*===== footer =====*/
+    footer {
+        padding:40px 0 60px; font-size:13px; color:#f6f6f6;
+        background:#02155f;
+    }
+    .ft-wrap {
+        display:flex; justify-content:space-between;
+        width:1300px; margin:0 auto; padding:0 30px;
+    }
+    .sns { display:flex; }
+    .sns a { padding-left:15px; font-size:24px; color:#f6f6f6; }
+}
+
+
+/* 웹브라우저의 너비값이 1050픽셀 이상 1349픽셀 이하인 경우에만 스타일 적용 */
+@media screen and (min-width:1050px) and (max-width:1349px) {
+    #trigger, .mb { display:none; }
+
+    header.dark { background:rgba(0,0,0,0.8); }
+    nav {
+        position:relative;
+        display:flex; justify-content:space-between; align-items:center;
+        width:1000px; height:100%; margin:0 auto; padding:0 30px;
+    }
+    nav a { color:#fff; }
+    #main-menu, .top-menu { display:flex; }
+    #main-menu { position:absolute; left:300px; top:0; }
+    #main-menu > li > a {
+        padding:15px 20px 13px;
+        background:url('../imgs/menu-bar.jpg') no-repeat right 20px;
+    }
+    #main-menu > li > a:hover { color:rgb(250, 30, 100); }
+    #main-menu > li:last-child > a { background:none; }
+    .top-menu a { padding-left:20px; font-size:14px; }
+
+    /* ===== dropdown menu =====*/
+    #main-menu > li { position:relative; }
+    .sub-menu { display:none; position:absolute; top:50px; }
+    .sub-menu a {
+        height:40px; font-size:14px; text-align:center; line-height:38px;
+        background:rgba(0,0,0,0.85);
+        transition:all 0.2s ease-in;
+    }
+    #main-menu > li:first-child .sub-menu a { width:90px; }
+    #main-menu > li:nth-child(2) .sub-menu a { width:130px; }
+    #main-menu > li:first-child .sub-menu { left:-8px; }
+    #main-menu > li:nth-child(2) .sub-menu { left:-4px; }
+    .sub-menu a:hover { background:rgba(250, 30, 100, 0.8); }
+    .sub-menu li:last-child a { border-radius:0 0 10px 10px; }
+
+
+    /*===== footer =====*/
+    footer {
+        padding:40px 0 60px; font-size:13px; color:#f6f6f6;
+        background:#02155f;
+    }
+    .ft-wrap {
+        display:flex; justify-content:space-between;
+        width:1000px; margin:0 auto; padding:0 30px;
+    }
+    .sns { display:flex; }
+    .sns a { padding-left:15px; font-size:24px; color:#f6f6f6; }
+}
+
+
+/* 웹브라우저의 너비값이 600픽셀 이상 1049픽셀 이하인 경우에만 스타일 적용 */
+@media screen and (min-width:600px) and (max-width:1049px) {
+    .dt { display:none; }
+
+    header.dark { background:rgba(0,0,0,0.8); }
+    nav { height:100%; }
+    nav a { color:#fff; }
+
+    .logo {
+        position:absolute; left:50%; top:0;
+        transform:translate(-50%, 0);
+    }
+
+    #trigger {
+        position:absolute; right:30px; top:18px;
+        width:30px; height:20px;
+    }
+    #trigger span {
+        position:absolute; left:0; width:100%; height:2px;
+        background:#f2f5d4;
+        transition:all 0.4s ease-in;
+    }
+    #trigger span:nth-child(1) { top:0; }
+    #trigger span:nth-child(2) { top:9px; background:#f5b6de; }
+    #trigger span:nth-child(3) { bottom:0; }
+    
+    #main-menu {
+        position:absolute; left:-1100px; top:50px;
+        width:75%; height:100vh; padding-top:100px;
+        text-align:center;
+        background:rgba(10, 70, 150, 0.9); opacity:0;
+        transition:all 0.4s ease-in;
+    }
+    #main-menu > li > a { padding:20px 0; font-size:24px; }
+    #main-menu > li > a:hover { color:rgb(250, 30, 100); }
+    .sub-menu {
+        display:none; padding:10px 0;
+        background:rgba(250, 30, 100, 0.8);
+        box-shadow:0 0 25px rgba(0,0,0,0.7) inset;
+    }
+    .sub-menu a { padding:10px 0; font-size:20px; }
+
+    /*===== 트리거 버튼을 클릭했을 때 =====*/
+    #trigger.active span:nth-child(1) { width:85%; transform:translateY(9px) rotate(-135deg); }
+    #trigger.active span:nth-child(2) { opacity:0; }
+    #trigger.active span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
+    #main-menu.active { left:0; opacity:1; }
+
+    .top-menu { display:flex; position:absolute; left:30px; top:3px; }
+    .top-menu a { padding-right:15px; font-size:30px; }
+
+
+    /*===== footer =====*/
+    footer {
+        padding:40px 0 60px; font-size:13px; color:#f6f6f6;
+        background:#02155f;
+    }
+    .ft-wrap { width:350px; margin:0 auto; text-align:center; }
+    .ft-wrap p:nth-child(1) { width:300px; margin:0 auto; }
+    .ft-wrap p:nth-child(2) { margin-top:15px; }
+    .sns { display:flex; justify-content:center; margin-top:25px; }
+    .sns a { padding:0 15px; font-size:30px; color:#f6f6f6; }
+}
+
+
+
+
+/* 웹브라우저의 너비값이 599픽셀 이하인 경우에만 스타일 적용 */
+@media screen and (max-width:599px) {
+    .dt { display:none; }
+
+    header.dark { background:rgba(0,0,0,0.8); }
+    nav { height:100%; }
+    nav a { color:#fff; }
+
+    .logo {
+        position:absolute; left:50%; top:0;
+        transform:translate(-50%, 0);
+    }
+
+    #trigger {
+        position:absolute; left:15px; top:17px;
+        width:30px; height:20px;
+    }
+    #trigger span {
+        position:absolute; left:0; width:100%; height:2px;
+        background:#f2f5d4;
+        transition:all 0.4s ease-in;
+    }
+    #trigger span:nth-child(1) { top:0; }
+    #trigger span:nth-child(2) { top:9px; background:#f5b6de; }
+    #trigger span:nth-child(3) { bottom:0; }
+    
+    #main-menu {
+        position:absolute; left:-650px; top:50px;
+        width:100%; height:100vh; padding-top:100px;
+        text-align:center;
+        background:rgba(10, 70, 150, 0.9); opacity:0;
+        transition:all 0.4s ease-in;
+    }
+    #main-menu > li > a { padding:20px 0; font-size:24px; }
+    #main-menu > li > a:hover { color:rgb(250, 30, 100); }
+    .sub-menu {
+        display:none; padding:10px 0;
+        background:rgba(250, 30, 100, 0.8);
+        box-shadow:0 0 25px rgba(0,0,0,0.7) inset;
+    }
+    .sub-menu a { padding:10px 0; font-size:20px; }
+
+    /*===== 트리거 버튼을 클릭했을 때 =====*/
+    #trigger.active span:nth-child(1) { width:85%; transform:translateY(9px) rotate(-135deg); }
+    #trigger.active span:nth-child(2) { opacity:0; }
+    #trigger.active span:nth-child(3) { width:85%; transform:translateY(-9px) rotate(135deg); }
+    #main-menu.active { left:0; opacity:1; }
+
+    .top-menu { display:flex; position:absolute; right:15px; top:3px; }
+    .top-menu a { padding-left:10px; font-size:30px; }
+
+
+    /*===== footer =====*/
+    footer {
+        padding:40px 0 60px; font-size:13px; color:#f6f6f6;
+        background:#02155f;
+    }
+    .ft-wrap { width:350px; margin:0 auto; text-align:center; }
+    .ft-wrap p:nth-child(1) { width:300px; margin:0 auto; }
+    .ft-wrap p:nth-child(2) { margin-top:15px; }
+    .sns { display:flex; justify-content:center; margin-top:25px; }
+    .sns a { padding:0 15px; font-size:30px; color:#f6f6f6; }
+}

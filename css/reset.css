@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@font-face { /* h3적용*/
+    font-family:gil;
+    src:url('../fonts/GIL.eot');
+    src:url('../fonts/GIL.woff')format('woff');
+}
+
+/* h2 적용 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Noto Sans KR", sans-serif; */
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+body { /*본문 서체 적용, 웹 페이지 배경색 적용 */
+    font-family:"Noto Sans KR",sans-serif; font-size:15px; color:#222;
+    background:#f2f2f2;
+}
+h2 { font-family:"Noto Sans KR", sans-serif; }
+h4 { font-family:gil; }
+ul { list-style:none; }
+a { display:block; color:#222; text-decoration:none; border:0; outline:0; }
+img { border:0; outline:0; }
+span { display:block; }
