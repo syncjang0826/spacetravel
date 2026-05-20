@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+
+/*===== FlexSlider 최상위 요소 =====*/
+.flexslider { margin: 0; border: 0; overflow: hidden; }
+/*===== 이전/다음 버튼 =====*/
+.flex-direction-nav a {
+    height: 80px; margin: -40px 0 0;
+    color: #f6f6f6; z-index: 0; /* 네비게이션 드로어 위로 보여지는 부분을 안보이게 설정 */
+}
+/*===== 이전 버튼 : 마우스 오버 =====*/
+.flexslider:hover .flex-direction-nav .flex-prev { left: 0; }
+/*===== 이전/다음 버튼 : 부트스트랩 아이콘 =====*/
+.flex-direction-nav .bi { font-size: 48px; }
+/*===== 블릿 버튼 =====*/
+.flex-control-nav { bottom: 10px; }
+.flex-control-paging li a.flex-active,
+.flex-control-paging li a:hover { background: #caddf8; }
+.flex-control-paging li a { background: #eee; }
+
+
+
+@media screen and (min-width: 1350px) {
+    .slides > li { position: relative; }
+    .fs-item { height: 500px; }
+    .fs-bg1 {
+        background: url('../imgs/fhd-slide1.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .fs-bg2 {
+        background: url('../imgs/fhd-slide2.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .fs-cts {
+        position: absolute; left: 50%; top: 220px;
+        width: 1300px; padding: 0 30px; transform: translateX(-50%);
+        color: #f6f6f6;
+    }
+    .fs-cts h2 {
+        font-size: 52px; text-shadow: 2px 2px 2px #000;
+        text-transform: uppercase;
+    }
+    .fs-cts p { width: 550px; font-size: 18px; }
+}
+
+
+
+@media screen and (min-width: 1050px) and (max-width: 1349px) {
+    .slides > li { position: relative; }
+    .fs-item { height: 450px; }
+    .fs-bg1 {
+        background: url('../imgs/fhd-slide1.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .fs-bg2 {
+        background: url('../imgs/fhd-slide2.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .fs-cts {
+        position: absolute; left: 50%; top: 200px;
+        width: 1000px; padding: 0 30px; transform: translateX(-50%);
+        color: #f6f6f6;
+    }
+    .fs-cts h2 {
+        font-size: 48px; text-shadow: 2px 2px 2px #000;
+        text-transform: uppercase;
+    }
+    .fs-cts p { width: 470px; font-size: 16px; }
+}
+
+
+
+@media screen and (min-width: 600px) and (max-width: 1049px) {
+    .slides > li { position: relative; }
+    .fs-item { height: 500px; }
+    .fs-bg1 {
+        background: url('../imgs/tb-slide1.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .fs-bg2 {
+        background: url('../imgs/tb-slide2.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .fs-cts {
+        position: absolute; top: 230px;
+        color: #f6f6f6;
+    }
+    @media screen and (min-width: 750px) and (max-width: 1049px) {
+        .fs-cts { left: 80px; width: 660px; }
+    }
+    @media screen and (min-width: 600px) and (max-width: 749px) {
+        .fs-cts {
+            left: 50%; width: 400px; text-align: center;
+            transform: translateX(-50%);
+        }
+    }
+
+    .fs-cts h2 {
+        font-size: 48px; line-height: 42px; text-shadow: 2px 2px 2px #000;
+        text-transform: uppercase;
+    }
+    .fs-cts p { width: 420px; padding-top: 10px; }
+}
+
+
+
+@media screen and (max-width: 599px) {
+    .slides > li { position: relative; }
+    .fs-item { height: 100vh; }
+    .fs-bg1 {
+        background: url('../imgs/sm-slide1.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .fs-bg2 {
+        background: url('../imgs/sm-slide2.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    .fs-cts {
+        position: absolute; left: 50%; top: 45%;
+        width: 350px; margin-left: -175px;
+        color: #f6f6f6; text-align: center;
+    }
+    .fs-cts h2 {
+        font-size: 44px; line-height: 42px; text-shadow: 2px 2px 2px #000;
+        text-transform: uppercase;
+    }
+    .fs-cts p { padding: 10px 30px 0; }
+}
